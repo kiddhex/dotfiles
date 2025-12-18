@@ -3,6 +3,9 @@ execute pathogen#helptags()
 
 syntax enable
 
+set t_Co=256
+let g:solarized_termcolors=256
+
 " Automatic time-based theme switching
 let current_hour = strftime("%H")
 
@@ -12,8 +15,6 @@ if current_hour >= 7 && current_hour < 19
 else
     set background=dark
 endif
-
-let g:solarized_termcolors=256
 colorscheme solarized
 
 :set number
