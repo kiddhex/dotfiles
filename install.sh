@@ -54,3 +54,9 @@ fi
 
 echo "Done."
 
+read -p "Do you want to reconfigure Powerlevel10k? (Y/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    zsh -i -c "p10k configure"
+fi
+
