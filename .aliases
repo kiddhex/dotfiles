@@ -5,6 +5,7 @@ alias ls='ls --color'
 alias ll='ls -alF'
 alias la='ls -A'
 alias countfiles="find . -type f | wc -l"
+alias reload="source ~/.zshrc"
 
 # Laravel
 alias pam="php artisan migrate"
@@ -12,8 +13,12 @@ alias pams="php artisan migrate --seed"
 alias pamfs="php artisan migrate:fresh --seed"
 alias pamrs="php artisan migrate:refresh --seed"
 alias phpunit="vendor/bin/phpunit"
+alias paratest="vendor/bin/paratest"
 alias pest="vendor/bin/pest"
 alias pint="vendor/bin/pint"
+
+# Python
+alias pip="pip3"
 
 # Elixir
 alias mer="mix ecto.reset"
