@@ -54,13 +54,10 @@ setopt hist_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
-# Aliases
-alias ls='ls --color'
-
-#Shell integrations
-eval "$(fzf --zsh)"
-
-source ~/.aliases
+# Load Aliases
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
 
 export PATH="$HOME/.composer/vendor/bin:$HOME/Library/Python/3.9/bin:$HOME/.local/bin:$PATH"
 

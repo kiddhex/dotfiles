@@ -10,6 +10,7 @@ FILES=(
     ".zshrc:$HOME/.zshrc"
     ".vimrc:$HOME/.vimrc"
     ".p10k.zsh:$HOME/.p10k.zsh"
+    ".aliases:$HOME/.aliases"
 )
 
 mkdir -p "$BACKUP_DIR"

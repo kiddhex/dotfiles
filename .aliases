@@ -1,0 +1,29 @@
+# ~/.aliases
+
+# System
+alias ls='ls --color'
+alias ll='ls -alF'
+alias la='ls -A'
+alias countfiles="find . -type f | wc -l"
+
+# Laravel
+alias pam="php artisan migrate"
+alias pams="php artisan migrate --seed"
+alias pamfs="php artisan migrate:fresh --seed"
+alias pamrs="php artisan migrate:refresh --seed"
+alias phpunit="vendor/bin/phpunit"
+alias pest="vendor/bin/pest"
+alias pint="vendor/bin/pint"
+
+# Elixir
+alias mer="mix ecto.reset"
+alias mem="mix ecto.migrate"
+alias mt="mix test --max-cases 6"
+alias mf="mix format"
+alias ml="mix lint"
+alias mdt="MIX_ENV=test mix ecto.drop; mix test --max-cases 6"
+alias mtrt="mix test --max-cases 6 --repeat-until-failure 20"
+
+# Git
+alias gbr='git branch --sort=creatordate --sort=committername --format "%(align:20) %(creatordate:relative) %(end) %(align:25) %(committername) %(end) %(refname:lstrip=-1)"
+'
