@@ -7,11 +7,11 @@ echo "Setting up dotfiles..."
 
 # 1. SYMLINK CONFIG FILES
 FILES=(
-    ".aliases:$HOME/.aliases"
-    ".gitconfig:$HOME/.gitconfig"
-    ".p10k.zsh:$HOME/.p10k.zsh"
-    ".vimrc:$HOME/.vimrc"
-    ".zshrc:$HOME/.zshrc"
+    "aliases:$HOME/.aliases"
+    "gitconfig:$HOME/.gitconfig"
+    "p10k.zsh:$HOME/.p10k.zsh"
+    "vimrc:$HOME/.vimrc"
+    "zshrc:$HOME/.zshrc"
 )
 
 mkdir -p "$BACKUP_DIR"
