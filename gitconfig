@@ -30,6 +30,9 @@
     theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
     filelog = log --graph --decorate --stat --pretty=short --abbrev-commit
     latest = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+    show-copy = "!git show HEAD | pbcopy"
+    # Copy ONLY the code changes:
+    show-copy-code = "!git show --format='' HEAD | pbcopy"
 [color]
     ui = true
     status = auto
