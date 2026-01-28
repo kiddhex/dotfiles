@@ -41,6 +41,8 @@
     in {
       homeConfigurations."blisshex-mac" = mkSystem "aarch64-darwin";
 
+      homeConfigurations."blisshex-mac-intel" = mkSystem "x86_64-darwin";
+
       homeConfigurations."blisshex-linux" = mkSystem "x86_64-linux";
     };
 }

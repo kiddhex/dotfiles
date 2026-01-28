@@ -55,10 +55,17 @@ fi
 echo "Checking Nix configuration..."
 
 if command -v nix >/dev/null 2>&1; then
-    # Detect Architecture for the Flake
+    # Detect Architecture (Smart Mac Check)
     if [[ "$(uname)" == "Darwin" ]]; then
-        FLAKE_TARGET="blisshex-mac"
+        if [[ "$(uname -m)" == "arm64" ]]; then
+            echo "🍎 Apple Silicon detected."
+            FLAKE_TARGET="blisshex-mac"
+        else
+            echo "💻 Intel Mac detected."
+            FLAKE_TARGET="blisshex-mac-intel"
+        fi
     else
+        echo "🐧 Linux detected."
         FLAKE_TARGET="blisshex-linux"
     fi
 
