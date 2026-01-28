@@ -82,5 +82,15 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+# Nix (Standard Init)
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+
+# Home Manager (Loads tools like 'nil')
+if [ -e "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
+    . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+fi
+
 export PATH="$HOME/.composer/vendor/bin:$HOME/Library/Python/3.9/bin:$HOME/.local/bin:$PATH"
 
