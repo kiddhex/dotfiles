@@ -1,3 +1,26 @@
+#AI tools:
+
+# Detect OS for clipboard command
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias clip="pbcopy"
+elif [ -n "$WAYLAND_DISPLAY" ]; then
+    alias clip="wl-copy" # For Hyprland
+else
+    alias clip="xclip -selection clipboard"
+fi
+
+# Usage: ask User.php Controller.php
+function ask() {
+    for file in "$@"; do
+        echo "File: $file"
+        echo '```'
+        cat "$file"
+        echo '```'
+        echo "---"
+    done | clip
+    echo "Files copied to clipboard! Paste them into the web chat."
+}
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
