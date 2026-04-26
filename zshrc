@@ -94,3 +94,5 @@ fi
 
 export PATH="$HOME/.composer/vendor/bin:$HOME/Library/Python/3.9/bin:$HOME/.local/bin:$PATH"
 
+alias mempalace="~/code/mempalace/.venv/bin/python -m mempalace"
+
